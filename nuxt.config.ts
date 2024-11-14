@@ -83,6 +83,7 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@vueuse/nuxt',
     '@nuxt/devtools',
+    "nuxt-directus"
   ],
   vite: {
     plugins: [],
