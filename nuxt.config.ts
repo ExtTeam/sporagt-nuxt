@@ -34,23 +34,18 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
       htmlAttrs: { lang: 'ru' },
+      title: "Nuxt Starter",
       meta: [
         {name: 'msapplication-TileColor', content: '#da532c'},
         {name: 'theme-color', content: '#ffffff'},
       ],
-      link: [
-        {rel: 'apple-touch-icon', sizes: '180x180', href: '\/apple-touch-icon.png'},
-        {rel: 'icon', type: 'image/png', sizes: '32x32', href: '\/favicon-32x32.png'},
-        {rel: 'icon', type: 'image/png', sizes: '16x16', href: '\/favicon-16x16.png'},
-        {rel: 'mask-icon', href: '\/safari-pinned-tab.svg', color: '#bf2920'},
-        {rel: 'manifest', href: '\/site.webmanifest'},
-      ],
+      link: [],
       script: []
     },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   css: [
-    '~/assets/styles/variables.css'
+    '~/assets/styles/variables.pcss'
   ],
   postcss: {
     plugins: {
@@ -58,7 +53,7 @@ export default defineNuxtConfig({
       'postcss-import': {},
       'postcss-nested': {},
       '@csstools/postcss-global-data': {
-        files: ['./client/assets/styles/media-queries.css']
+        files: ['./app/assets/styles/media-queries.pcss']
       },
       'postcss-preset-env': {
         stage: 2,
